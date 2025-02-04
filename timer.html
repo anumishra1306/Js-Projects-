@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+h1{
+    color: aliceblue;
+    text-align: center;
+padding-top: 20px;
+}
+/* #root{
+    border: 2px solid wheat;
+}
+        */
+    </style>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <div id="root"></div>
+
+    <script>
+        ///------------DISPLAYING CURRENT TIME 
+function time(){
+    const timer=document.getElementById('root');
+    const now = new Date();
+    const IndianTime=now.toLocaleTimeString();
+    timer.innerHTML=IndianTime;
+}
+time();
+////------IMPLEMENTING TIME FUNCTION AFTER EVERY ONE SECOND SOO USE SE INTERVAL
+setInterval(time,1000);
+///---------ADDING STYLING
+const timer=document.getElementById('root');
+timer.style.fontSize="100px";
+timer.style.color="red";
+timer.style.display="flex";
+timer.style.justifyContent="center";
+timer.style.alignItems="center";
+// timer.text-ShadowRoot="0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc";
+// timer.style.border="2px solid white";
+// timer.style.backgroundColor="blue";
+timer.style.height="100vh";
+    </script>
+</body>
+</html>
